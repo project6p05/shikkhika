@@ -1,18 +1,3 @@
-https://dn710008.ca.archive.org/0/items/wael-capcut-template/1.%207288708985383963905.mp4
-https://dn710008.ca.archive.org/0/items/wael-capcut-template/2.%207273572019202034946.mp4
-https://dn710008.ca.archive.org/0/items/wael-capcut-template/3.%207246097231886011650.mp4
-https://dn710008.ca.archive.org/0/items/wael-capcut-template/4.%207242373113189584130.mp4
-https://dn710008.ca.archive.org/0/items/wael-capcut-template/5.%207275741127205031169.mp4
-https://dn710008.ca.archive.org/0/items/wael-capcut-template/6.%207277932503774530817.mp4
-https://dn710008.ca.archive.org/0/items/wael-capcut-template/7.%207252342284337810689.mp4
-
-C:\Users\atiku>powershell -NoProfile -Command "$url=Read-Host 'Enter URL';$item=$url.Substring($url.LastIndexOf('/')+1);$base=$url -creplace '/?$','/';$req=Invoke-WebRequest $url;$files=$req.Links|?{$_.href-like'*.mp4'}|%{[System.Uri]::UnescapeDataString($_.href)};foreach($file in $files){$downloadUrl='https://archive.org/download/{0}/{1}'-f$item,$file;$resp=Invoke-WebRequest -Uri $downloadUrl -Method Head -MaximumRedirection 5;$directUrl=$resp.BaseResponse.ResponseUri.AbsoluteUri;Write-Output \"file '$directUrl'\"}"
-Enter URL: https://archive.org/download/Horror_Express
-file 'https://ia601304.us.archive.org/20/items/Horror_Express/Horror_Express.mp4'
-file 'https://ia801304.us.archive.org/20/items/Horror_Express/Horror_Express_512kb.mp4'
-
-C:\Users\atiku>powershell -NoProfile -Command "$url=Read-Host 'Enter URL';$item=$url.Substring($url.LastIndexOf('/')+1);$base=$url -creplace '/?$','/';$req=Invoke-WebRequest $url;$files=$req.Links|?{$_.href-like'*.mp4'}|%{[System.Uri]::UnescapeDataString($_.href)};foreach($file in $files){$downloadUrl='https://archive.org/download/{0}/{1}'-f$item,$file;$resp=Invoke-WebRequest -Uri $downloadUrl -Method Head -MaximumRedirection 5;$directUrl=$resp.BaseResponse.ResponseUri.AbsoluteUri;Write-Output \"file '$directUrl'\"}"
-Enter URL: https://archive.org/download/pdcartooncollection
 file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Brementown%20Musicians%20UB%20Iwerks%20ComiColor.mp4'
 file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/COMICOLOR%20-%201935%20-%20_Old%20Mother%20Hubbard_.mp4'
 file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/ComiColor_%20Simple%20Simon.mp4'
