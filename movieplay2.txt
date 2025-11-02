@@ -1,0 +1,53 @@
+https://dn710008.ca.archive.org/0/items/wael-capcut-template/1.%207288708985383963905.mp4
+https://dn710008.ca.archive.org/0/items/wael-capcut-template/2.%207273572019202034946.mp4
+https://dn710008.ca.archive.org/0/items/wael-capcut-template/3.%207246097231886011650.mp4
+https://dn710008.ca.archive.org/0/items/wael-capcut-template/4.%207242373113189584130.mp4
+https://dn710008.ca.archive.org/0/items/wael-capcut-template/5.%207275741127205031169.mp4
+https://dn710008.ca.archive.org/0/items/wael-capcut-template/6.%207277932503774530817.mp4
+https://dn710008.ca.archive.org/0/items/wael-capcut-template/7.%207252342284337810689.mp4
+
+C:\Users\atiku>powershell -NoProfile -Command "$url=Read-Host 'Enter URL';$item=$url.Substring($url.LastIndexOf('/')+1);$base=$url -creplace '/?$','/';$req=Invoke-WebRequest $url;$files=$req.Links|?{$_.href-like'*.mp4'}|%{[System.Uri]::UnescapeDataString($_.href)};foreach($file in $files){$downloadUrl='https://archive.org/download/{0}/{1}'-f$item,$file;$resp=Invoke-WebRequest -Uri $downloadUrl -Method Head -MaximumRedirection 5;$directUrl=$resp.BaseResponse.ResponseUri.AbsoluteUri;Write-Output \"file '$directUrl'\"}"
+Enter URL: https://archive.org/download/Horror_Express
+file 'https://ia601304.us.archive.org/20/items/Horror_Express/Horror_Express.mp4'
+file 'https://ia801304.us.archive.org/20/items/Horror_Express/Horror_Express_512kb.mp4'
+
+C:\Users\atiku>powershell -NoProfile -Command "$url=Read-Host 'Enter URL';$item=$url.Substring($url.LastIndexOf('/')+1);$base=$url -creplace '/?$','/';$req=Invoke-WebRequest $url;$files=$req.Links|?{$_.href-like'*.mp4'}|%{[System.Uri]::UnescapeDataString($_.href)};foreach($file in $files){$downloadUrl='https://archive.org/download/{0}/{1}'-f$item,$file;$resp=Invoke-WebRequest -Uri $downloadUrl -Method Head -MaximumRedirection 5;$directUrl=$resp.BaseResponse.ResponseUri.AbsoluteUri;Write-Output \"file '$directUrl'\"}"
+Enter URL: https://archive.org/download/pdcartooncollection
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Brementown%20Musicians%20UB%20Iwerks%20ComiColor.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/COMICOLOR%20-%201935%20-%20_Old%20Mother%20Hubbard_.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/ComiColor_%20Simple%20Simon.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Dick%20Whittington's%20Cat%20UB%20Iwerks%20ComicColor.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Fleischer%20Color%20Classic%20Little%20Lambkins%201940%20(old%20free%20cartoon%20public%20domain).mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Fleischer%20Color%20Classic%20Somewhere%20in%20Dreamland%201936)%20(old%20cartoon%20vintage%20public%20domain).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Fleischer%20cartoon%20Color%20Classic%20Greedy%20Humpty%20Dumpty%201936%20(old%20cartoon%20vintage%20public%20domain).mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Fleischer%20cartoon%20Color%20Classic%20Hawaiian%20Birds%201936(old%20cartoons%20vintage%20public%20domain).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Fleischer%20cartoon%20Color%20Classic%20The%20Little%20Stranger%201936%20(old%20free%20cartoons%20public%20domain).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Fleischer%20cartoon%20Gabby%20King%20for%20a%20Day%201940(old%20free%20cartoon%20funny%20public%20domain).mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Hercules1960sCartoon-DaedalusAndTheEvilUnicorn.mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Hercules1960sCartoon-DaedalusAndTheMinotaur.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Hercules1960sCartoon-DaedalusConcoctsABrew.mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Hercules1960sCartoon-DaedalusCopsTheThunderboltDisc.mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Humpty%20Dumpty%201935%20Comicolor%20Ub%20Iwerks%20cartoons.mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Jerky%20Turkey%20Cartoon%201945%20Public%20Domain.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Little%20Lulu%20Cad%20and%20Caddy%20-%20Old%20Cartoon%20from%20Public%20Domain.mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Once%20Upon%20a%20Time%20Public%20Domain%20Cartoon.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/SUMMER%20VS%20WINTER%20Cartoon%20by%20ComiColor%20(1935).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Scatcrow.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Simple%20Simon%20(1935)%20Ub%20Iwerks%20Cartoon.mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Skeleton%20Frolics%201937%20Ub%20Iwerks%5B1%5D.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/The%20Headless%20Horseman%20(1934).mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/The%20Little%20Red%20Hen%201934)%20Comicolor%20(old%20free%20cartoons.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/The%20Three%20Bears%201935)%20Comicolor%20(old%20free%20cartoons%20).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Tom%20Thumb%20(1936)%20Ub%20Iwerks%20Cartoon.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Tom%20Thumb-UB%20Iwerks%20ComiColor.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/UB%20Iwerks%20Jack%20and%20the%20Beanstalk%201933.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/UB%20Iwerks%20The%20Little%20Red%20Hen%201934.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20Ali%20Baba%201936)%20(old%20free%20cartoons%20public%20domain).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20Balloon%20Land%201935%20old%20free%20cartoons%20public%20domain.mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20Don%20Quixote%201934)%20(old%20free%20cartoons%20public%20domain).mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20Little%20Boy%20Blue%201936%20(old%20free%20cartoons%20public%20domain).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20Mary's%20Little%20Lamb%201935)%20(old%20free%20cartoons%20public%20domain).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20Summertime%201935)%20(old%20free%20cartoons%20public%20domain).mp4'
+file 'https://ia800204.us.archive.org/19/items/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20The%20Headless%20Horseman%201934)%20(old%20free%20cartoons%20public%20domain).mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20The%20Valiant%20Tailor%201934)%20(old%20free%20cartoons%20public%20domain).mp4'
+file 'https://ia600204.us.archive.org/19/items/pdcartooncollection/_HAPPY%20DAYS_%20(1936)%20-%20Ub%20Iwerks%20cartoon.mp4'
